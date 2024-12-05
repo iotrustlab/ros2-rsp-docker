@@ -1,0 +1,1902 @@
+[
+  {
+    "timestamp": "2024-12-05T21:45:46.611259",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0,
+      0.0
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.625237",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      3.764989490008502e-05,
+      4.234989176675232e-05
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.645329",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.00011294905410280567,
+      0.00012704902590282633
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.666662",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.00022589621642346547,
+      0.0002540961036236384
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.686751",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.00037648949011052544,
+      0.0004234891767780067
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.709121",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0005647263528762104,
+      0.0006352256478789834
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.729039",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0007906036519373169,
+      0.0008893022701449628
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.745705",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0010541176040662213,
+      0.0011857151475510664
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.765289",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0013552637956520887,
+      0.0015244597348908016
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.785166",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0016940371827722793,
+      0.001905530837847996
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.805104",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0020704320912739546,
+      0.002328922613079004
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.825129",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0024844422168658776,
+      0.0027946285683051846
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.845325",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0029360606252204105,
+      0.00330264156241565
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.865311",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0034252797520857034,
+      0.0038529538055802827
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.885170",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0039520914034080765,
+      0.004445556859373019
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.905614",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.00451648675546459,
+      0.005080441636905397
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.944371",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.005118456355005804,
+      0.005757598402970369
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.967692",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.00575799011940872,
+      0.006477016774196371
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:46.985555",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.006435077336839909,
+      0.007238685719211652
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.005450",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.007149706666428817,
+      0.008042593558818862
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.026089",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.00790186613845125,
+      0.008888727966179883
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.045423",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.008691543154523026,
+      0.009777075967010922
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.066525",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.009518724487803816,
+      0.010707623939787839
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.087139",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.010383396283211128,
+      0.011680357615961723
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.105278",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.01128554405764448,
+      0.012695262080184712
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.128020",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.012225152700219713,
+      0.013752321770546042
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.147002",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.013202206472513483,
+      0.014851520478818327
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.166526",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.014216689008817878,
+      0.01599284135071408
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.187875",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.015268583316405219,
+      0.017176266886152446
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.205459",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.01635787177580297,
+      0.018401778939536154
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.225355",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.017484536141078817,
+      0.019669358720038697
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.246448",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.01864855754013587,
+      0.02097898679190171
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.268768",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.019849916475017992,
+      0.02233064307474256
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.286569",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.021088592822225274,
+      0.023724306843872146
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.305646",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.022364565833039602,
+      0.025159956730622872
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.327752",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.023677814133860366,
+      0.026637570722686837
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.347080",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.025028315726550263,
+      0.028157126164464197
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.365454",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.02641604798879122,
+      0.0297185997574217
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.385439",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.027840987674450396,
+      0.03132196756046142
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.408083",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0293031109139563,
+      0.032967204990299634
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.426780",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.030802393214684982,
+      0.034654286821855874
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.448179",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.03233880946135631,
+      0.03638318718865213
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.465777",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.033912333916440315,
+      0.038153879583222215
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.489147",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.03552294022057362,
+      0.03996633685753125
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.508359",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.03717060139298591,
+      0.04182053122340532
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.526303",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.03885528983193649,
+      0.043716434252971226
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.545278",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.04057697731516084,
+      0.04565401687910637
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.567636",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.04233563500032726,
+      0.04763324939589876
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.586015",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.04413123342550353,
+      0.049654101459117146
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.605627",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.04596374250963356,
+      0.0517165420866912
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.627183",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.04783313155302415,
+      0.05382053965920183
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.646853",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.049739369237841655,
+      0.05596606192038161
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.665534",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.05168242362861872,
+      0.05815307597762518
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.688342",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.05366226217277097,
+      0.06038154830250985
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.706506",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.05567885170112376,
+      0.06265144473132615
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.726720",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.05773215842844877,
+      0.06496273046561853
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.749375",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.05982214795401071,
+      0.067315370072736
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.767129",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0619487852621239,
+      0.06970932748639289
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.787021",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.06411203472271881,
+      0.07214456600723962
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.806894",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0663118600919186,
+      0.07462104830344346
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.825524",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.06854822451262546,
+      0.07713873641127929
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.848225",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.07082109051511709,
+      0.0796975917357304
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.866097",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.07313042001765285,
+      0.08229757505109928
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.885891",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.07547617432709,
+      0.08493864650162829
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.908020",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.07785831413950974,
+      0.08762076560213047
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.925513",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.08027679954085315,
+      0.09034389123863017
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.945576",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.08273159000756705,
+      0.09310798166901364
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.967833",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.08522264440725964,
+      0.09591299452368968
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:47.985460",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.0877499209993661,
+      0.09875888680626002
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.007205",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.09031337743582389,
+      0.10164561489419982
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.025465",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.09291297076175806,
+      0.10457313453954793
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.047365",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.09554865741617619,
+      0.10754140086960713
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.066123",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.09822039323267333,
+      0.11055036838765417
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.085877",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.10092813344014656,
+      0.1135999909736598
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.105989",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.1036718326635195,
+      0.11669022188501856
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.125435",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.10645144492447642,
+      0.11982101375728843
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.147831",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.10926692364220629,
+      0.12299231860494042
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.166593",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.11211822163415648,
+      0.12620408782211784
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.186046",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.1150052911167962,
+      0.1294562721834055
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.206650",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.11792808370638967,
+      0.1327488218446086
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.228232",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.12088655041977911,
+      0.1360816863435415
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.246777",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.12388064167517723,
+      0.13945481460082634
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.267373",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.12691030729296962,
+      0.14286815492070118
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.285379",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.12997549649652662,
+      0.14632165499183808
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.305390",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.13307615791302507,
+      0.14981526188817088
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.327271",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.1362122395742795,
+      0.15334892206973275
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.348701",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.13938368891758307,
+      0.1569225813835033
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.366789",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.14259045278655816,
+      0.16053618506426554
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.389215",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.14583247743201647,
+      0.1641896777354725
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.408563",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.1491097085128288,
+      0.1678830034101234
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.425909",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.15242209109680435,
+      0.17161610549164966
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.448166",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.15576956966157968,
+      0.17538892677481036
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.468680",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.15915208809551712,
+      0.17920140944659751
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.487434",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.16256958969861274,
+      0.18305349508715088
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.505694",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.16602201718341392,
+      0.18694512467068222
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.527084",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.16950931267594635,
+      0.19087623856640945
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.546777",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.1730314177166506,
+      0.19484677653950006
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.565793",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.176588273261328,
+      0.19885667775202429
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.586413",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.18017981968209626,
+      0.20290588076391777
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "timestamp": "2024-12-05T21:45:48.606158",
+    "joint_names": [
+      "left_wheel_joint",
+      "right_wheel_joint"
+    ],
+    "positions": [
+      0.1838059967683543,
+      0.2069943235339537
+    ],
+    "velocities": [
+      0.0,
+      0.0
+    ],
+    "efforts": [
+      0.0,
+      0.0
+    ]
+  }
+]

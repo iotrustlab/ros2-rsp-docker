@@ -1,0 +1,18 @@
+fuzzing:
+  seed: 42  # For reproducibility
+  frequency: 50.0
+  
+  # Joint limits for Turtlebot4 standard
+  joint_limits:
+    # Drive system
+    left_wheel_joint:
+      min: -6.28
+      max: 6.28
+    right_wheel_joint:
+      min: -6.28
+      max: 6.28
+    # Add other joints if needed
+
+  test_sequence:
+    duration_seconds: 300
+    save_interval_seconds: 5

@@ -1,0 +1,13 @@
+/**:
+  ros__parameters:
+    # Path to the URDF file
+    robot_description_file: "/urdf/standard/turtlebot4.urdf.xacro"
+    robot_description: ""  # This will be populated by robot_state_publisher
+    # Publishing settings
+    publish_frequency: 50.0
+    ignore_timestamp: false
+    use_tf_static: true
+    frame_prefix: ""
+    
+    # Additional params if needed for turtlebot4
+    model_type: "standard"  # or "lite"

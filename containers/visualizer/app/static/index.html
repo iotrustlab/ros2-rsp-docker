@@ -1,0 +1,25 @@
+<!-- containers/visualizer/app/static/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROS2 Visualizer</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/script.js"></script>
+    <style>
+        .container { 
+            display: flex;
+            justify-content: space-around;
+        }
+        .plot {
+            width: 45%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="jointPlot" class="plot"></div>
+        <div id="transformPlot" class="plot"></div>
+    </div>
+</body>
+</html>
