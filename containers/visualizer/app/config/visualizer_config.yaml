@@ -1,0 +1,18 @@
+visualizer:
+  # WebSocket settings
+  ws_port: 8000
+  
+  # Chart settings
+  chart_history: 50  # Number of points to keep in charts
+  trajectory_history: 1000  # Number of points for trajectory
+  
+  # Update frequencies
+  position_update_hz: 10
+  velocity_update_hz: 10
+  trajectory_update_hz: 5
+  
+  # Display settings
+  chart_colors:
+    left_wheel: "#2196f3"
+    right_wheel: "#4caf50"
+    trajectory: "#673ab7"

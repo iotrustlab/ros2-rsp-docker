@@ -41,6 +41,8 @@ services:
     build:
       context: .
       dockerfile: containers/visualizer/Dockerfile
+    volumes:
+      - ./config:/app/config:ro
     ports:
       - "8000:8000"
     environment:

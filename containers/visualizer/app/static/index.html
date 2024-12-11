@@ -1,25 +1,99 @@
-<!-- containers/visualizer/app/static/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ROS2 Visualizer</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="static/script.js"></script>
-    <style>
-        .container { 
-            display: flex;
-            justify-content: space-around;
-        }
-        .plot {
-            width: 45%;
-            height: 400px;
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ROS2 Data Visualizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="/static/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Decimation plugin to handle large data sets -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-decimation@2.0.0"></script>
 </head>
 <body>
-    <div class="container">
-        <div id="jointPlot" class="plot"></div>
-        <div id="transformPlot" class="plot"></div>
+<header class="navbar">
+  <div class="navbar-brand">ROS2 Data Visualizer</div>
+  <div id="status" class="status">Connecting...</div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2>Controls</h2>
+    <p>Toggle charts:</p>
+    <div class="toggle-group">
+      <label class="toggle">
+        <input type="checkbox" id="showJointPos" checked>
+        <span class="slider"></span>
+        <span class="label">Joint Positions</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="showJointVel" checked>
+        <span class="slider"></span>
+        <span class="label">Joint Velocities</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="showJointEff" >
+        <span class="slider"></span>
+        <span class="label">Joint Efforts</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="showTfPos" checked>
+        <span class="slider"></span>
+        <span class="label">Transform Positions (X)</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="showTfRot" checked>
+        <span class="slider"></span>
+        <span class="label">Transform Rotations (Z)</span>
+      </label>
     </div>
+
+    <p style="margin-top:20px;">Log Autoscroll:</p>
+    <label class="toggle">
+      <input type="checkbox" id="autoScrollLog" checked>
+      <span class="slider"></span>
+      <span class="label">Autoscroll On</span>
+    </label>
+  </aside>
+
+  <main class="content">
+    <div class="chart-grid">
+      <div class="chart-card" id="cardJointPos">
+        <h3>Joint Positions (L & R)</h3>
+        <canvas id="chartJointPos"></canvas>
+      </div>
+      <div class="chart-card" id="cardJointVel">
+        <h3>Joint Velocities (L & R)</h3>
+        <canvas id="chartJointVel"></canvas>
+      </div>
+      <div class="chart-card" id="cardJointEff">
+        <h3>Joint Efforts (L & R)</h3>
+        <canvas id="chartJointEff"></canvas>
+      </div>
+      <div class="chart-card" id="cardTfPos">
+        <h3>Transform Positions X (L & R)</h3>
+        <canvas id="chartTfPos"></canvas>
+      </div>
+      <div class="chart-card" id="cardTfRot">
+        <h3>Transform Rotations Z (L & R)</h3>
+        <canvas id="chartTfRot"></canvas>
+      </div>
+    </div>
+    <div class="log-panel">
+      <h3>Raw Data Log</h3>
+      <div class="log-wrapper" id="logWrapper">
+        <table id="dataTable">
+          <thead>
+            <tr><th>#</th><th>Time</th><th>Type</th><th>Data</th></tr>
+          </thead>
+          <tbody id="dataBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="footer">© ROS2 Visualizer</footer>
+<script src="/static/visualizer.js"></script>
 </body>
 </html>

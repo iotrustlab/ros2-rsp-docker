@@ -1,18 +1,69 @@
-fuzzing:
-  seed: 42  # For reproducibility
-  frequency: 50.0
+# fuzzing:
+#   seed: 42  # For reproducibility
+#   frequency: 50.0
   
-  # Joint limits for Turtlebot4 standard
-  joint_limits:
-    # Drive system
-    left_wheel_joint:
-      min: -6.28
-      max: 6.28
-    right_wheel_joint:
-      min: -6.28
-      max: 6.28
-    # Add other joints if needed
+#   # Joint limits for Turtlebot4 standard
+#   joint_limits:
+#     # Drive system
+#     left_wheel_joint:
+#       min: -6.28
+#       max: 6.28
+#     right_wheel_joint:
+#       min: -6.28
+#       max: 6.28
+#     # Add other joints if needed
 
+#   test_sequence:
+#     duration_seconds: 300
+#     save_interval_seconds: 5
+
+fuzzing:
+  # Basic settings
+  seed: 42  # For reproducibility
+  frequency: 50.0  # Hz
+  
+  # Robot physical parameters (Turtlebot4 standard)
+  robot_params:
+    wheel_radius: 0.036  # meters
+    wheel_separation: 0.233  # meters
+    max_linear_velocity: 0.46  # m/s
+    max_angular_velocity: 1.9  # rad/s
+    max_wheel_acceleration: 2.0  # rad/s^2
+  
+  # Joint limits
+  joint_limits:
+    left_wheel_joint:
+      min: -6.28  # rad
+      max: 6.28   # rad
+      velocity_limit: 12.77  # rad/s (derived from max linear velocity)
+      acceleration_limit: 2.0  # rad/s^2
+    right_wheel_joint:
+      min: -6.28  # rad
+      max: 6.28   # rad
+      velocity_limit: 12.77  # rad/s
+      acceleration_limit: 2.0  # rad/s^2
+  
+  # Motion patterns configuration
+  patterns:
+    sequence: ["circle", "figure_eight", "square", "spiral", "stop"]
+    duration: 10.0  # seconds per pattern
+    parameters:
+      circle:
+        radius: 0.5  # meters
+        linear_velocity: 0.3  # m/s
+      figure_eight:
+        linear_velocity: 0.25  # m/s
+        period: 8.0  # seconds
+      square:
+        side_length: 0.6  # meters
+        linear_velocity: 0.3  # m/s
+      spiral:
+        initial_radius: 0.2  # meters
+        expansion_rate: 0.05  # meters/s
+        linear_velocity: 0.2  # m/s
+  
+  # Test sequence parameters
   test_sequence:
     duration_seconds: 300
     save_interval_seconds: 5
+    data_output_path: "/data/fuzzing_results/"
