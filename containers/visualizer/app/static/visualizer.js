@@ -172,7 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
             {
               label:'Left',
               data:[],
-              borderColor:'#1f77b4',
+              // borderColor:'#1f77b4',
+              borderColor: 'rgba(31, 119, 180, 0.8)', // #1f77b4 with alpha
+              backgroundColor: 'rgba(31, 119, 180, 0.1)',
               fill:false,
               pointRadius:0,
               borderWidth:2
@@ -180,10 +182,13 @@ document.addEventListener('DOMContentLoaded', () => {
             {
               label:'Right',
               data:[],
-              borderColor:'#2ca02c',
+              // borderColor:'#2ca02c',
+              borderColor: 'rgba(44, 160, 44, 0.8)', // #2ca02c with alpha
+              backgroundColor: 'rgba(44, 160, 44, 0.1)',
               fill:false,
               pointRadius:0,
-              borderWidth:2
+              borderWidth:2,
+              borderDash:[5,5]
             }
           ]
         },

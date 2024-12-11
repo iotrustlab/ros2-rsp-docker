@@ -7,6 +7,7 @@ from tf2_msgs.msg import TFMessage
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
+from threading import Lock
 import json
 import asyncio
 from threading import Thread
@@ -23,19 +24,31 @@ logger = logging.getLogger(__name__)
 class ConnectionManager:
     def __init__(self):
         self.active_connections: Set[WebSocket] = set()
+        self.lock = Lock()  # Add thread safety
 
     async def connect(self, websocket: WebSocket):
         await websocket.accept()
-        self.active_connections.add(websocket)
-        logger.info(f"New client connected. Total connections: {len(self.active_connections)}")
+        with self.lock:
+            self.active_connections.add(websocket)
+            logger.info(f"New client connected. Total connections: {len(self.active_connections)}")
 
     def disconnect(self, websocket: WebSocket):
-        self.active_connections.remove(websocket)
-        logger.info(f"Client disconnected. Total connections: {len(self.active_connections)}")
+        with self.lock:
+            try:
+                self.active_connections.remove(websocket)
+                logger.info(f"Client disconnected. Total connections: {len(self.active_connections)}")
+            except KeyError:
+                # Websocket already removed
+                logger.debug("Attempted to remove already disconnected client")
 
     async def broadcast(self, message: str):
         disconnected = set()
-        for connection in self.active_connections:
+        
+        # Create copy of connections to avoid modification during iteration
+        with self.lock:
+            connections = self.active_connections.copy()
+            
+        for connection in connections:
             try:
                 await connection.send_text(message)
             except WebSocketDisconnect:
@@ -44,8 +57,15 @@ class ConnectionManager:
                 logger.error(f"Error broadcasting message: {e}")
                 disconnected.add(connection)
         
-        for conn in disconnected:
-            self.disconnect(conn)
+        # Clean up disconnected clients
+        with self.lock:
+            for conn in disconnected:
+                try:
+                    self.active_connections.remove(conn)
+                except KeyError:
+                    pass
+            if disconnected:
+                logger.info(f"Cleaned up {len(disconnected)} disconnected clients. Total connections: {len(self.active_connections)}")
 
 class Visualizer(Node):
     def __init__(self, connection_manager):
