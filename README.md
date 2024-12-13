@@ -13,6 +13,8 @@ A containerized system for testing and visualizing the behavior of the `robot_st
 
 ### High-Level Architecture
 
+This architecture diagram shows the intended functionality of the system. Note that, the low level data flow between the components is abstracted in this diagram.
+
 ```mermaid
 %%{init: {
   'theme': 'base',
@@ -68,7 +70,7 @@ graph LR
 
 ### Detailed Architecture
 
-Even tho the sysem is composed on four containers, the following diagram shows ther abstracted low level data flow between the components.
+Even though the sysem is composed on four containers, the following diagram shows ther abstracted low level data flow between the components.
 
 ```mermaid
 %%{
