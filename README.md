@@ -1,61 +1,74 @@
-# ROS2 Robot Visualizer
+# RSP Fuzzer and Visualizer
 
-A real-time visualization and data recording system for ROS2-based robots, specifically designed for the Turtlebot4 platform.
+A containerized system for testing and visualizing the behavior of the `robot_state_publisher` ROS package in isolation. This system generates test motion patterns to feed into the `robot_state_publisher` and visualizes the resulting joint states and transform data in real-time.
 
-## Components
+## Containers
 
-- **Robot State Publisher**: Publishes URDF-based robot state
-- **Fuzzer**: Generates test motion patterns
-- **Recorder**: Captures joint states and transform data
+- **Robot State Publisher**: [`robot_state_publisher`](https://wiki.ros.org/robot_state_publisher) uses the URDF specified by the parameter robot_description and the joint positions from the topic joint_states to calculate the forward kinematics of the robot and publish the results via [`tf`](https://wiki.ros.org/tf)
+- **Fuzzer**: Generates test motion patterns to feed into the robot state publisher
+- **Recorder**: Captures joint states and transform data from the `robot_state_publisher` and stores it in `JSON` format.
 - **Visualizer**: Web-based real-time visualization dashboard
 
 ## Architecture
+
+### High-Level Architecture
 
 ```mermaid
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#E3F2FD',
-    'primaryTextColor': '#1A237E',
-    'primaryBorderColor': '#42A5F5',
-    'lineColor': '#78909C',
-    'secondaryColor': '#F3E5F5',
-    'tertiaryColor': '#E8F5E9',
-    'fontSize': '14px',
-    'fontFamily': 'Roboto, Arial, sans-serif'
+    'primaryColor': '#e3f2fd',
+    'secondaryColor': '#f3f0ff',
+    'tertiaryColor': '#fff5f5',
+    'primaryBorderColor': '#1e88e5',
+    'lineColor': '#424242'
+  },
+  'flowchart': {
+    'curve': 'basis',
+    'nodeSpacing': 50,
+    'rankSpacing': 50
   }
 }}%%
 
 graph LR
     subgraph Core["Core System"]
-        F["Fuzzer<br/>(Input Generator)"]-->|"Joint States"|R["Robot State<br/>Publisher"]
-        R-->|"Joint States +<br/>Transform Data"|V["Visualizer"]
-        R-->|"Joint States +<br/>Transform Data"|C["Recorder"]
+        F["Fuzzer Node<br/>(Input Generator)"]-->|"JointState"|R["Robot State<br/>Publisher"]
+        R-->|"JointState +<br/>TF Messages"|V["WebSocket<br/>Server"]
+        R-->|"JointState +<br/>TF Messages"|C["Data Logger"]
     end
 
-    subgraph Config["Configuration Layer"]
+    subgraph Config["Configuration"]
         CF["Config<br/>Files"]-.->F
-        UR["URDF<br/>Models"]-.->R
+        UR["URDF<br/>Files"]-->|"Robot Description"|R
     end
 
-    subgraph Web["Web Interface Layer"]
-        V-->|"WebSocket<br/>Connection"|W["Web UI"]
+    subgraph Web["Interface"]
+        V-->|"WebSocket"|W["Web UI"]
     end
 
-    C-->|"JSON Data"|D[(Data<br/>Storage)]
+    C-->|"JSON Export"|D[(Data<br/>Directory)]
 
     %% Style Definitions
-    classDef default fill:#E3F2FD,stroke:#42A5F5,color:#1A237E,font-weight:500
-    classDef config fill:#E8F5E9,stroke:#66BB6A,color:#1B5E20,font-weight:500
-    classDef web fill:#F3E5F5,stroke:#AB47BC,color:#4A148C,font-weight:500
-    classDef storage fill:#FFF3E0,stroke:#FF9800,color:#E65100,font-weight:500
+    classDef default fill:#e3f2fd,stroke:#1e88e5,stroke-width:1.5px,color:#1565c0
+    classDef storage fill:#f3f0ff,stroke:#7c4dff,stroke-width:1.5px,color:#4527a0
+    classDef visual fill:#fff5f5,stroke:#FF9800,stroke-width:1.5px,color:#FF9800
+    classDef record fill:#f1f8e9,stroke:#7cb342,stroke-width:1.5px,color:#33691e
 
     %% Apply Styles
-    class F,R,V,C default
-    class CF,UR config
-    class W web
-    class D storage
+    class F,R default
+    class CF,UR storage
+    class V,W visual
+    class C,D record
+
+    %% Style subgraphs
+    style Core fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
+    style Config fill:#f3f0ff,stroke:#7c4dff,stroke-width:2px
+    style Web fill:#fff5f5,stroke:#FF9800,stroke-width:2px
 ```
+
+### Detailed Architecture
+
+Even tho the sysem is composed on four containers, the following diagram shows ther abstracted low level data flow between the components.
 
 ```mermaid
 %%{
