@@ -168,7 +168,7 @@ graph TB
 4. Open the visualizer in your browser:
 
     ```text
-    http://localhost:8080
+    http://localhost:8000
     ```
 
     The visualizer should display graphs containing the robot's joint states and transform data as follows:

@@ -90,10 +90,86 @@ graph LR
     style Config fill:#f3f0ff,stroke:#7c4dff,stroke-width:2px
     style Web fill:#fff5f5,stroke:#FF9800,stroke-width:2px
 ```
+<!-- Center and italic caption of the figure in HTML -->
+<p style="text-align: center; font-style: italic;">Figure 2: High Level System Diagram </p>
 
 The `robot_state_publisher` node takes `robot_description` as a parameter to start and subscribes to `joint_states` messages. These messages, typically published by the robot’s hardware interface or `joint_state_controller` node, are instead generated in this project by the Fuzzer component. This component publishes synthetic `joint_states` messages to simulate the robot’s motion. The `robot_state_publisher` node calculates the forward kinematics of the robot using this input and publishes the corresponding transform data to the `tf` topic. The Recorder component captures both `joint_states` and `tf` data from their respective topics and stores them as `JSON` files on a Docker volume. Meanwhile, the Visualizer component provides a web-based real-time dashboard, enabling monitoring of the system’s behavior throughout the process.
 
 ### Implementation Details
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'fontFamily': 'Helvetica',
+      'fontSize': '14px',
+      'primaryColor': '#e3f2fd',
+      'secondaryColor': '#f3f0ff',
+      'tertiaryColor': '#fff5f5',
+      'primaryBorderColor': '#1e88e5',
+      'lineColor': '#424242',
+      'textColor': '#212529'
+    },
+    'flowchart': {
+      'htmlLabels': true,
+      'curve': 'basis',
+      'nodeSpacing': 50,
+      'rankSpacing': 50
+    }
+  }
+}%%
+
+graph TB
+    %% Node styles
+    classDef default fill:#e3f2fd,stroke:#1e88e5,stroke-width:1.5px,color:#1565c0,font-family:Helvetica
+    classDef storage fill:#f3f0ff,stroke:#7c4dff,stroke-width:1.5px,color:#4527a0
+    classDef visual fill:#fff5f5,stroke:#FF9800,stroke-width:1.5px,color:#FF9800
+    classDef record fill:#f1f8e9,stroke:#7cb342,stroke-width:1.5px,color:#33691e
+    
+    subgraph DataStorage["Data Storage"]
+        direction TB
+        DS[Data Directory]:::storage
+        URDF[URDF Files]:::storage
+        Config[Config Files]:::storage
+    end
+
+    subgraph ROS2["ROS2 Domain"]
+        direction TB
+        RSP[Robot State Publisher]
+        FUZ[Fuzzer Node]
+        FUZ -->|JointState| RSP
+    end
+
+    subgraph VIS["Visualizer"]
+        direction TB
+        WebServer[WebSocket Server]:::visual
+        webUI[Web UI]:::visual
+        WebServer -->|WebSocket| webUI
+    end
+
+    subgraph REC["Recorder"]
+        direction TB
+        DataLogger[Data Logger]:::record
+    end
+    
+    %% External connections
+    URDF -->|Robot Description| RSP
+    Config -->|Parameters| FUZ
+    FUZ -->|JointState| WebServer
+    RSP -->|TF Messages| WebServer
+    RSP -->|TF Messages| DataLogger
+    FUZ -->|JointState| DataLogger
+    DataLogger -->|JSON Export| DS
+
+    %% Style all subgraphs
+    style DataStorage fill:#f3f0ff,stroke:#7c4dff,stroke-width:2px
+    style ROS2 fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
+    style VIS fill:#fff5f5,stroke:#FF9800,stroke-width:2px
+    style REC fill:#f1f8e9,stroke:#7cb342,stroke-width:2px
+```
+<!-- Center and italic caption of the figure in HTML -->
+<p style="text-align: center; font-style: italic;">Figure 3: Low-level Data Flow Diagram </p>
 
 This project is a composition of four docker containers, each hosting a specific component:
 
@@ -103,9 +179,68 @@ This project is a composition of four docker containers, each hosting a specific
     ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:=/path/to/urdf 
     ```
 
-This node subscribes to the `joint_states` topic to receive the robot’s joint positions, which are used to calculate the forward kinematics and publish the results via the `tf` topic.
+    This node subscribes to the `joint_states` topic to receive the robot’s joint positions, which are used to calculate the forward kinematics and publish the results via the `tf` topic.
 
-#### References
+2. **Fuzzer**: The Fuzzer component generates test motion patterns to feed into the `robot_state_publisher` node. These patterns simulate the robot’s motion and are published to the `joint_states` topic. The Fuzzer component is responsible for generating a variety of test cases to explore the input space and trigger different behaviors in the `robot_state_publisher` node. At this stage, the project uses simple sinusoidal patterns to demonstrate the system’s functionality. However, the Fuzzer component can be extended to generate more complex and diverse test cases in future iterations.
+
+3. **Recorder**: The Recorder component captures joint states and transform data from the `robot_state_publisher` node and stores it in `JSON` format. This data is essential for analyzing the system’s behavior and identifying potential vulnerabilities or faults. The Recorder component records the system’s output throughout the testing process, enabling detailed post-analysis of the system’s behavior. This component is designed to be lightweight and efficient, ensuring minimal impact on system performance during testing, while its isolated nature enables precise data capture without interference from other components.
+
+4. **Visualizer**: The Visualizer component provides a web-based real-time visualization dashboard for monitoring the system’s behavior. This component displays the robot’s motion, joint states, and transform data in real-time, enabling users to observe the system’s behavior throughout the testing process. The Visualizer component has a websocket server that receives `joint_states` and `tf` messages from respective topics and passes them as JSON objects to the web UI for visualization. The web UI is a simple dashboard that displays the robot’s motion and kinematics, providing users with a clear and intuitive interface for monitoring the system’s behavior.
+
+    ![Web UI](./docs/images/web-console.png)
+
+    <!-- Center and italic caption of the figure in HTML -->
+    <p style="text-align: center; font-style: italic;">Figure 4: Web UI for Real-time Monitoring</p>
+
+### Artifacts
+
+This report is accompanied by a [GitHub repository](https://github.com/iotrustlab/ros2-rsp-docker/tree/main) containing the source code and configuration files for the project. The repository includes detailed instructions for setting up and running the system, as well as [documentation](https://github.com/iotrustlab/ros2-rsp-docker/blob/main/README.md) on the project’s architecture and components.
+
+#### Quick Start
+
+With `docker` and `docker-compose` installed, the system can be set up and run with the following steps:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/iotrustlab/ros2-rsp-docker.git
+    ```
+
+2. Create a `data` directory for storing results:
+
+    ```bash
+    mkdir data
+    ```
+
+3. Start the system:
+
+    ```bash
+    docker-compose up
+    ```
+
+4. [Open](http://localhost:8000) the visualizer web console in browser:
+
+    ```text
+    http://localhost:8000
+    ```
+
+## Result and Discussion
+
+This project demonstrates that containerization can be used tp effectively isolate and fuzz individual ROS2 nodes—in this case, the `robot_state_publisher` node—without the complexity of end-to-end simulation. By generating synthetic joint state inputs, capturing the resulting transforms, and visualizing the data in real-time, the system provides a more targeted environment for exploring potential vulnerabilities. This approach streamlines the testing process, allowing researchers and developers to focus on specific ROS2 components and their dependencies rather than dealing with the overhead of an entire robotic software stack.
+
+Primary limitation of the current implementation is the lack of automated extension to other ROS2 nodes. The system is designed to host the `robot_state_publisher` node specifically manually configuring it for only this node. Future work will focus on creating a more generalized interface that can be easily extended to other ROS2 nodes, enabling broader testing capabilities within the proposed framework.
+
+Other limitations include the simplicity of the test motion patterns generated by the Fuzzer component and its lack of extensibility for more complex scenarios. Future iterations will enhance the Fuzzer component to analyze the source code of the ROS2 node under test and generate more diverse and sophisticated test cases to explore the input space more comprehensively.
+
+Also, to achieve the greater vision of Deep-Fuzz, the system will require the integration to other components like Bug Oracles, Dependency Graph Generators and Large Language Models to extract safety properties from the codebase and its documentation. This will enable the system to generate test cases that reflect real-world operating conditions with greater accuracy and uncover subtle vulnerabilities that traditional testing methods would likely overlook.
+
+## Conclusion
+
+This project presents a containerized virtual testbed for fuzzing ROS2 nodes, demonstrated through the isolated testing of the `robot_state_publisher` node. The system generates motion patterns, feed them to the node, intercepts the output data, and creates real-time visualization. The project establishes a methodology for systematic, reproducible testing of ROS2 nodes in isolation, enabling more focused fault detection and validation without the complexity of full system simulation.
+
+By establishing a containerized testing environment specifically for the `robot_state_publisher` node, this project provides a proof-of-concept for a more granular, reproducible approach to fuzzing ROS2 components. Although still preliminary and limited in scope, the work lays a foundation for a broader, more sophisticated methodology. Extending the framework to other nodes, enhancing input generation techniques and formulating the bug oracles will bring us closer to a full-fledged, context-aware fuzzing framework. Such advancements hold promise for earlier and proactive vulnerability detection and overall improvements in the safety and reliability of cyber-physical robotic systems.
+
+## References
 
 [^1]: P. Johnston and R. Harris, “The boeing 737 max saga: lessons for software organizations,” Software Quality Professional, vol. 21, no. 3, pp. 4–12, 2019.
 [^2]: B. Fung, “The technology behind the Tesla crash, explained,” Washington Post, Jul. 2016. [Online]. Available: [washingtonpost.com](https://www.washingtonpost.com/news/the-switch/wp/2016/07/01/the-technology-behind-the-tesla-crash-explained/)
